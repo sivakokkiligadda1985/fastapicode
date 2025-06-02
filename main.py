@@ -1,6 +1,8 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from typing import List
+#Adding a comment in sivadev1
+#Adding changes from sivade2 only
 
 app = FastAPI()
 
@@ -8,7 +10,8 @@ app = FastAPI()
 class Todo(BaseModel):
     name: str
     completed: bool
-
+    #main branch chage in main.py
+    #change from sivadev3
 # In-memory database
 todos: List[Todo] = []
 
@@ -17,6 +20,7 @@ todos: List[Todo] = []
 def create_todo(todo: Todo):
     todos.append(todo)
     return todo
+#Adding a comment in sivadev1
 
 # Read all TODOs
 @app.get("/todos/", response_model=List[Todo])
