@@ -1,10 +1,13 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
+
 from typing import List
+
 #Adding a comment in sivadev1
 #Adding changes from sivade2 only
 
 app = FastAPI()
+
 
 # Pydantic model for TODO
 class Todo(BaseModel):
